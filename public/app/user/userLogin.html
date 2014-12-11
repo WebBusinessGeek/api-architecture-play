@@ -1,20 +1,24 @@
 <div ng-controller="userLoginController">
 
-
-    {{stuff}}
-    {{stuff2}}
+    {{auth_token}}<br/>
+    {{request_counter}}<br/>
+    {{stuff}}<br/>
+    {{stuff2}}<br/>
 
     <form role="form">
         <div class="form-group">
             <label for="email">Email address</label>
-            <input type="email" class="form-control" id="email" placeholder="Enter email">
+            <input type="email" class="form-control" ng-model="email" id="email" placeholder="Enter email">
         </div>
         <div class="form-group">
             <label for="password">Password</label>
-            <input type="password" class="form-control" id="password" placeholder="Password">
+            <input type="password" class="form-control" ng-model="password" id="password" placeholder="Password">
         </div>
 
-        <button type="submit" class="btn btn-default">Submit</button>
+        <button type="submit" class="btn btn-default" ng-click="addOne()">Submit</button>
+        <a href="/app/#/logincheck/">logincheck</a>
+        {{auth_token_child}}
+
     </form>
 
 

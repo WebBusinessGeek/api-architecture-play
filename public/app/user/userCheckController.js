@@ -6,4 +6,8 @@ angular.module('app')
 
         $scope.stuff = 'check';
 
-    }]);
+    }])
+    .service('userLoginService', function(){
+
+        this.service = 'userLoginService';
+    });

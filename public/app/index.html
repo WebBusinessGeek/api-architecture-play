@@ -12,7 +12,7 @@
 
 </head>
 <body>
-    <div class="container">
+    <div class="container" ng-controller="authenticationController">
         <div class="page-header"><h1>Hello, world!</h1></div>
 
         <input type="text" ng-model="test" />{{test}}
@@ -27,6 +27,7 @@
 <script src="angular1.3-bootstrap3.2/angular-route.min.js"></script>
 <script src="config/app.js"></script>
 <script src="config/routes.js"></script>
+<script src="Auth/authenticationController.js"></script>
 <script src="user/userCheckController.js"></script>
 <script src="user/userLoginController.js"></script>
 

@@ -7,12 +7,21 @@ angular.module('app')
         $scope.stuff = 'login';
 
         $scope.stuff2 = userLoginService.service;
-    }])
+
+        $scope.clickAction = function(email, password)
+        {
+            console.log(email + ' ' + password);
+        }
+
+        $scope.auth_token_child = $scope.$parent.auth_token;
+
+        $scope.addOne = function()
+        {
+            $scope.$parent.request_counter++;
+        }
+    }]);
 
 
-    .service('userLoginService', function(){
 
-        this.service = 'userLoginService';
-    });
 
 
